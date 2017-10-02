@@ -1,0 +1,12 @@
+020
+Computer Logic Design
+CDA3208
+0
+020
+Database Design
+COP4203
+0
+021
+Engineering Calculus III
+MAC2283
+0
