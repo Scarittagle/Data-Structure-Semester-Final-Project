@@ -7,6 +7,8 @@
 //
 //
 
+#include "Person.h"
+#include "Course.h"
 #include <iostream>
 #include <string>
 
@@ -15,28 +17,38 @@ using namespace std;
 #ifndef STUDENT_H
 #define STUDENT_H
 
-class Student {
+class Student : public Person {
 private:
-	enum position { position_researchAssistant = 0, position_teachingAssistant };
-	enum degree { degree_Bachelor = 0, degree_Master, degree_Doctorate };
+	string Position;
+	string Degree;
+	string DeptID;
+
+	int cur = 0; //current position in courselist
+	string courselist[7];
+
 public:
 
 	//Default Constructor
 	Student();
 
 	//Copy Constructor
-	Student(string F, string L, int ID);
+	Student(string F, string L, string ID, string degree);
 
 	//Destructor
 	~Student();
 
+	//Display Info
+	void displayInfo();
+
 	//setter
-	void setPosition(position p);
-	void setDegree(degree d);
+	void setDeptID(string m_deptID);
+	void setPosition(string m_position);
+	void setDegree(string m_degree);
+	void addCourse(string m_addcourse);
 
 	//getter
-	position getPosition();
-	degree getDegree();
+	string getPosition();
+	string getDegree();
 };
 
 #endif

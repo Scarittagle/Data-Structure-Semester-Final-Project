@@ -17,30 +17,18 @@ using namespace std;
 #ifndef DEPARTMENT_H
 #define DEPARTMENT_H
 
-class Department 
-{
+class Department {
+
 private:
+	//Use Mapping for Course, Student, Teacher use.
 	static map<string, Department*> s_mapDepartment;
-
-public:
-	static Department* getDepartment(string strID)
-	{
-		auto itr = s_mapDepartment.find(strID);
-		if (itr == s_mapDepartment.end())
-		{
-			return nullptr;
-		}
-		else
-		{
-			return itr->second;
-		}
-	}
-
-private:
 	string DeptName;
 	string departmentID;
 	int numCourse;
 	int numPeople;
+
+	int cur = 0; //current position in course list
+	string array_courselist[51][3];
 
 public:
 
@@ -54,6 +42,11 @@ public:
 	~Department();
 
 	//setter
+	void setDeptID(string m_deptID);
+	void setDeptName(string m_name);
+
+	//op
+	void addCourse(string m_CID, string m_Coursename);
 	void addOneCourse();
 	void addOnePerson();
 
@@ -64,6 +57,20 @@ public:
 	//DisplayResult
 	void displayDeptInfo();
 
-};
+	//Map Class
+	static Department* getDepartment(string strID)
+	{
+		auto itr = s_mapDepartment.find(strID);
+		if (itr == s_mapDepartment.end())
+		{
+			return nullptr;
+		}
+		else
+		{
+			return itr->second;
+		}
+	}
 
+
+};
 #endif

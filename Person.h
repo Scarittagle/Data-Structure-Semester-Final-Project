@@ -7,8 +7,7 @@
 //
 //
 
-#include "Student.h"
-#include "Teacher.h"
+#include "Department.h"
 #include <iostream>
 #include <string>
 
@@ -19,10 +18,10 @@ using namespace std;
 
 class Person {
 
-private:
+protected:
 	string firstName;
 	string lastName;
-	int ID;
+	string ID;
 	string DOB;
 	string Gender;
 
@@ -30,29 +29,28 @@ public:
 	//Default Constructor
 	Person();
 
+	//Copy Constructor
+	Person(string m_last, string m_first, string m_ID);
+
 	//Destructor
 	~Person();
 
 	//setter
 	void setLastName(string last);
 	void setFirstName(string first);
-	void setID(int id);
-	void setDOB(string dob);
-	void setGender(string gender);
+	void setID(string m_id);
+	void setDOB(string m_dob);
+	void setGender(string m_gender);
 
 	//getter
 	string getLastName();
 	string getFirstName();
-	int getID();
+	string getID();
 	string getDOB();
 	string getGender();
 
-	//Operations
-	void assign(string F, string L, int ID, int CID);
-	void enroll(string F, string L, int ID, int CID);
-
 	//Display info
-	void displayPersonInfo();
+	void displayInfo();
 
 };
 

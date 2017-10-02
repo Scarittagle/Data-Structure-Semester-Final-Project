@@ -1,0 +1,26 @@
+020
+Su
+Weiwei
+U17420699
+1995-01-01
+M
+Bachelor
+Teaching Assistant
+2
+CDA3208
+A
+COP4203
+A
+020
+Wang
+Linqi
+U12345678
+1995-05-16
+F
+Bachelor
+Student
+2
+COP4203
+A
+CDA3208
+A
