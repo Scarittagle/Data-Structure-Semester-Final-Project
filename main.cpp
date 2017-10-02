@@ -469,13 +469,13 @@ int main(void) {
 	//6) Printing course names in which a student is enrolled in.	//included on that test student list.
 
 	//7) Printing teachers assigned to a course
-	//that operation is done thu modifying txt file. You should post this guideline 3 weeks earlier.
+	//that operation is done thu modifying txt file.
 
 	//8) Printing courses that a teacher teaches
 	//included on that test teacher list.
 
 	//9) Printing all teachers, students or courses of a department,
-	//per restriction on late-posted guideline, I only managed to figure out printing all courese of a
+	//per restriction on late-posted guideline, I only managed to figure out printing all courses of a
 	//department.
 	//included on that test department list.
 }
